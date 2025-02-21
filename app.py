@@ -130,4 +130,8 @@ def logout():
 
 # Run the Flask app
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(debug=True, host="0.0.0.0", port=5002)
+=======
+    app.run(debug= False, host="0.0.0.0", port=5001)
+>>>>>>> 1d0444de1d956a05313a3c41675ab3d98715800d
