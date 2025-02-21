@@ -145,4 +145,4 @@ def print_users():
 
 # Run the Flask app
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5001)
+    app.run(debug= False, host="0.0.0.0", port=5001)
