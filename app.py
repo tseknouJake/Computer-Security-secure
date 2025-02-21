@@ -107,8 +107,8 @@ def signup():
 # New route: View Password
 @app.route("/view_password")
 def view_password():
-    if "username" not in session:
-        return redirect(url_for("login"))
+    # if "username" not in session:
+    #     return redirect(url_for("login"))
 
     # Get the logged-in username from the session
     username = session["username"]
@@ -128,21 +128,6 @@ def logout():
     return redirect(url_for("home"))
 
 
-@app.route("/print_users")
-def print_users():
-    # Get all user records from the database
-    users = User.query.all()
-
-    # Build a simple string to display each user's info
-    output = "<h1>All Users</h1>"
-    for user in users:
-        output += (
-            f"ID: {user.id}, Username: {user.username}, Password: {user.password}<br>"
-        )
-
-    return output
-
-
 # Run the Flask app
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5001)
+    app.run(debug=True, host="0.0.0.0", port=5002)
