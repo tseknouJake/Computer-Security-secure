@@ -1,5 +1,6 @@
 from flask import Flask, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
+import logging
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.sqlite3"
@@ -7,6 +8,11 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 app.secret_key = "your_secret_key"  # Needed for session management
 
+logging.basicConfig(
+    filename="failed_logins.txt",
+    level=logging.WARNING,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -55,6 +61,7 @@ def login():
             session["username"] = user.username
             return redirect(url_for("home"))
         else:
+            logging.warning(f"Failed login attempt for username: {username} from IP: {request.remote_addr}")
             return "Invalid credentials.<br><a href='/login'>Try again</a>"
 
     # HTML form for login
