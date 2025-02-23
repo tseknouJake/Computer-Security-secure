@@ -106,10 +106,25 @@ def login():
                 failed_attempts.pop(username_value, None)
                 session["username"] = user.username
                 return redirect(url_for("home"))
+            else:
+                            logging.warning(
+                f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}"
+            )
+            print(f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}")
+            if username_value in failed_attempts:
+                failed_attempts[username_value]["count"] += 1
+                failed_attempts[username_value]["last_attempt"] = current_time
+            else:
+                failed_attempts[username_value] = {
+                    "count": 1,
+                    "last_attempt": current_time,
+                }
+            error_message = "Invalid credentials"
         else:
             logging.warning(
                 f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}"
             )
+            print(f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}")
             if username_value in failed_attempts:
                 failed_attempts[username_value]["count"] += 1
                 failed_attempts[username_value]["last_attempt"] = current_time
