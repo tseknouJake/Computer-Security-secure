@@ -1,7 +1,11 @@
 from flask import Flask, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 import logging
+<<<<<<< HEAD
 import bcrypt
+=======
+import time
+>>>>>>> 3ee7f9f60742127091cf14379bbefa6c227b642f
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.sqlite3"
@@ -14,6 +18,11 @@ logging.basicConfig(
     level=logging.WARNING,
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
+
+failed_attempts = {}
+COOLDOWN_TIME = 10
+MAX_ATTEMPTS = 3
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -54,15 +63,33 @@ def login():
         username = request.form["username"]
         password = request.form["password"]
 
+        current_time = time.time()
+
+        if username in failed_attempts:
+            attempts = failed_attempts[username]["count"]
+            last_attempt = failed_attempts[username]["last_attempt"]
+
+            if attempts >= MAX_ATTEMPTS and (current_time -last_attempt) < COOLDOWN_TIME:
+                remaining_time = int(COOLDOWN_TIME - (current_time - last_attempt))
+                return f"Too many failed attempts. Try again in {remaining_time} seconds."
+
         # Look up the user in the database
         user = User.query.filter_by(
             username=username, password=decrypt_password(password)
         ).first()
         if user:
+            failed_attempts.pop(username, None)
             session["username"] = user.username
             return redirect(url_for("home"))
         else:
             logging.warning(f"Failed login attempt for username: {username} from IP: {request.remote_addr}")
+
+            if username in failed_attempts:
+                failed_attempts[username]["count"] += 1
+                failed_attempts[username]["last_attempt"] = current_time
+            else:
+                failed_attempts[username] = {"count": 1, "last_attempt": current_time}
+
             return "Invalid credentials.<br><a href='/login'>Try again</a>"
 
     # HTML form for login
