@@ -8,8 +8,12 @@ import time
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.sqlite3"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-db = SQLAlchemy(app)
 app.secret_key = "your_secret_key"  # Needed for session management
+app.config["PEPPER"] = (
+    "VeryLongAndCoolPepper"  # we will use this for password peppering
+)
+
+db = SQLAlchemy(app)
 
 logging.basicConfig(
     filename="failed_logins.txt",
@@ -38,7 +42,7 @@ def is_strong_password(password):
     )
 
 
-# Home page: shows different content based on whether the user is logged in
+# home page
 @app.route("/")
 def home():
     if "username" in session:
@@ -67,7 +71,7 @@ def login():
     error_message = None
     username_value = ""
     password_value = ""
-    cooldown_time = None  # Initialize cooldown_time
+    cooldown_time = None
 
     if request.method == "POST":
         # Capture form data
@@ -94,13 +98,14 @@ def login():
                 )
 
         # look up the user in the database
-        user = User.query.filter_by(
-            username=username_value, password=password_value
-        ).first()
+        user = User.query.filter_by(username=username_value).first()
         if user:
-            failed_attempts.pop(username_value, None)
-            session["username"] = user.username
-            return redirect(url_for("home"))
+            peppered_password = (password_value + app.config["PEPPER"]).encode("utf-8")
+            stored_hash = user.password.encode("utf-8")
+            if bcrypt.checkpw(peppered_password, stored_hash):
+                failed_attempts.pop(username_value, None)
+                session["username"] = user.username
+                return redirect(url_for("home"))
         else:
             logging.warning(
                 f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}"
@@ -139,7 +144,7 @@ def signup():
         # Check if a user with this username already exists in the DB
         existing_user = User.query.filter_by(username=username_value).first()
         if existing_user:
-            error_message = "User already exists"
+            error_message = "User with that username already exists"
             return render_template(
                 "signup.html",
                 error_message=error_message,
@@ -160,12 +165,13 @@ def signup():
             )
         else:
             # Create a new user record and save it to the database
-            new_user = User(username=username_value, password=password_value)
+            peppered_password = (password_value + app.config["PEPPER"]).encode("utf-8")
+            hashed_password = bcrypt.hashpw(peppered_password, bcrypt.gensalt())
+            new_user = User(username=username_value, password=hashed_password.decode("utf-8"))
             db.session.add(new_user)
             db.session.commit()
             return "User created!<br><a href='/login'>Login now</a>"
 
-    error_message = None
     return render_template(
         "signup.html",
         error_message=error_message,
@@ -180,9 +186,8 @@ def view_password():
     if "username" not in session:
         return redirect(url_for("login"))
 
-    # Get the logged-in username from the session
     username = session["username"]
-    # Query the database for the user
+
     user = User.query.filter_by(username=username).first()
 
     if user:
@@ -212,18 +217,6 @@ def admin_page():
                 output += f"ID: {user.id}, Username: {user.username}, Password: {user.password}<br>"
 
     return output
-
-
-# def encrypt_password(plain_pword):
-#     plain_pword=plain_pword.encode('uft-8')
-#     salt
-
-# def decrypt_password(encrypted_pword):
-#     result = []
-#     for c in pword:
-#         # Shift character back by 3 positions
-#         result.append(chr(ord(c) - 3))
-#     return "".join(result)
 
 
 # to run the app
