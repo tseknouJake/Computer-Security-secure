@@ -1,6 +1,7 @@
 from flask import Flask, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 import logging
+import bcrypt
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.sqlite3"
@@ -139,17 +140,14 @@ def logout():
     return redirect(url_for("home"))
 
 
-def encrypt_password(pword):
-    result = []
-    for c in pword:
-        # Shift character by 2 positions
-        result.append(chr(ord(c) + 3))
-    return "".join(result)
+def encrypt_password(plain_pword):
+    plain_pword=plain_pword.encode('uft-8')
+    salt
 
-def decrypt_password(pword):
+def decrypt_password(encrypted_pword):
     result = []
     for c in pword:
-        # Shift character back by 2 positions
+        # Shift character back by 3 positions
         result.append(chr(ord(c) - 3))
     return "".join(result)
 
