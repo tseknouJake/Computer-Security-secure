@@ -5,8 +5,6 @@ import bcrypt
 import time
 
 
-is_admin = False
-
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.sqlite3"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -20,7 +18,7 @@ logging.basicConfig(
 )
 
 failed_attempts = {}
-COOLDOWN_TIME = 10
+COOLDOWN_TIME = 11
 MAX_ATTEMPTS = 3
 
 
@@ -95,7 +93,7 @@ def login():
                     cooldown_time=cooldown_time,
                 )
 
-        # Look up the user in the database
+        # look up the user in the database
         user = User.query.filter_by(
             username=username_value, password=password_value
         ).first()
@@ -129,33 +127,54 @@ def login():
 # sign up page
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
+    error_message = None
+    username_value = ""
+    password_value = ""
+
     if request.method == "POST":
         # Get form data
-        username = request.form["username"]
-        password = request.form["password"]
+        username_value = request.form["username"]
+        password_value = request.form["password"]
 
         # Check if a user with this username already exists in the DB
-        existing_user = User.query.filter_by(username=username).first()
+        existing_user = User.query.filter_by(username=username_value).first()
         if existing_user:
-            return "Username already exists.<br><a href='/signup'>Try again</a>"
+            error_message = "User already exists"
+            return render_template(
+                "signup.html",
+                error_message=error_message,
+                username_value=username_value,
+                password_value=password_value,
+            )
 
-        if not is_strong_password(password):
-            return (
+        if not is_strong_password(password_value):
+            error_message = (
                 "Password must be at least 8 characters long, contain an uppercase letter, "
-                "a lowercase letter, a number, and a special character.<br><a href='/signup'>Try again</a>"
+                "a lowercase letter, a number, and a special character."
+            )
+            return render_template(
+                "signup.html",
+                error_message=error_message,
+                username_value=username_value,
+                password_value=password_value,
             )
         else:
             # Create a new user record and save it to the database
-            new_user = User(username=username, password=password)
+            new_user = User(username=username_value, password=password_value)
             db.session.add(new_user)
             db.session.commit()
             return "User created!<br><a href='/login'>Login now</a>"
 
-    # HTML form for signup
-    return render_template("signup.html")
+    error_message = None
+    return render_template(
+        "signup.html",
+        error_message=error_message,
+        username_value=username_value,
+        password_value=password_value,
+    )
 
 
-# New route: View Password
+# view password
 @app.route("/view_password")
 def view_password():
     if "username" not in session:
@@ -182,7 +201,7 @@ def logout():
 @app.route("/admin_page")
 def admin_page():
     output = "you are not an admin"
-    if session.get("username") is not None :
+    if session.get("username") is not None:
         if session["username"] == "admin":
             # Get all user records from the database
             users = User.query.all()

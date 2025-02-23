@@ -16,7 +16,7 @@
           Please wait <span id="countdown">{{ cooldown_time }}</span> seconds before trying again.
         </p>
       {% endif %}
-      <input type="submit" value="Login">
+      <input type="submit" value="Login" id="login-btn" {% if cooldown_time %}disabled{% endif %}>
     </form>
     <br>
     <a href="/signup">Sign Up</a>
@@ -24,6 +24,7 @@
     {% if cooldown_time %}
     <script>
       var countdownElement = document.getElementById("countdown");
+      var loginButton = document.getElementById("login-btn");
       var timeLeft = parseInt(countdownElement.innerText);
       
       var timer = setInterval(function(){
@@ -31,7 +32,9 @@
           countdownElement.innerText = timeLeft;
           if(timeLeft <= 0){
               clearInterval(timer);
-              // Optionally, reload the page when the countdown ends
+              // Remove the disabled attribute so the user can try logging in again
+              loginButton.disabled = false;
+              // Optionally, reload the page to clear the cooldown message
               location.reload();
           }
       }, 1000);
