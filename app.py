@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, url_for, session
+from flask import Flask, request, redirect, url_for, session, render_template
 from flask_sqlalchemy import SQLAlchemy
 import logging
 import bcrypt
@@ -44,12 +44,12 @@ def is_strong_password(password):
 @app.route("/")
 def home():
     if "username" in session:
-        if session['username'] == "admin":
+        if session["username"] == "admin":
             return (
-            f"Hello, {session['username']}!<br>"
-            f"<a href='/view_password'>View Password</a><br>"
-            f"<a href='/admin_page'>Admin Page</a><br>"
-            f"<a href='/logout'>Logout</a>"
+                f"Hello, {session['username']}!<br>"
+                f"<a href='/view_password'>View Password</a><br>"
+                f"<a href='/admin_page'>Admin Page</a><br>"
+                f"<a href='/logout'>Logout</a>"
             )
         else:
             return (
@@ -66,57 +66,64 @@ def home():
 # Login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    if request.method == "POST":
-        # Get form data
-        username = request.form["username"]
-        password = request.form["password"]
+    error_message = None
+    username_value = ""
+    password_value = ""
+    cooldown_time = None  # Initialize cooldown_time
 
+    if request.method == "POST":
+        # Capture form data
+        username_value = request.form["username"]
+        password_value = request.form["password"]
         current_time = time.time()
 
-        if username in failed_attempts:
-            attempts = failed_attempts[username]["count"]
-            last_attempt = failed_attempts[username]["last_attempt"]
-
+        if username_value in failed_attempts:
+            attempts = failed_attempts[username_value]["count"]
+            last_attempt = failed_attempts[username_value]["last_attempt"]
             if (
                 attempts >= MAX_ATTEMPTS
                 and (current_time - last_attempt) < COOLDOWN_TIME
             ):
                 remaining_time = int(COOLDOWN_TIME - (current_time - last_attempt))
-                return (
-                    f"Too many failed attempts. Try again in {remaining_time} seconds."
+                error_message = "Too many failed attempts. Please wait."
+                cooldown_time = remaining_time  # Pass remaining time to the template
+                return render_template(
+                    "login.html",
+                    error_message=error_message,
+                    username_value=username_value,
+                    password_value=password_value,
+                    cooldown_time=cooldown_time,
                 )
 
         # Look up the user in the database
-        user = User.query.filter_by(username=username, password=password).first()
+        user = User.query.filter_by(
+            username=username_value, password=password_value
+        ).first()
         if user:
-            failed_attempts.pop(username, None)
+            failed_attempts.pop(username_value, None)
             session["username"] = user.username
             return redirect(url_for("home"))
-
         else:
             logging.warning(
-                f"Failed login attempt for username: {username} from IP: {request.remote_addr}"
+                f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}"
             )
-
-            if username in failed_attempts:
-                failed_attempts[username]["count"] += 1
-                failed_attempts[username]["last_attempt"] = current_time
+            if username_value in failed_attempts:
+                failed_attempts[username_value]["count"] += 1
+                failed_attempts[username_value]["last_attempt"] = current_time
             else:
-                failed_attempts[username] = {"count": 1, "last_attempt": current_time}
+                failed_attempts[username_value] = {
+                    "count": 1,
+                    "last_attempt": current_time,
+                }
+            error_message = "Invalid credentials"
 
-            return "Invalid credentials.<br><a href='/login'>Try again</a>"
-
-    # HTML form for login
-    return """
-        <h1>Login</h1>
-        <form method="post">
-          Username: <input type="text" name="username" required><br>
-          Password: <input type="password" name="password" required><br>
-          <input type="submit" value="Login">
-        </form>
-        <br>
-        <a href='/signup'>Sign Up</a>
-    """
+    return render_template(
+        "login.html",
+        error_message=error_message,
+        username_value=username_value,
+        password_value=password_value,
+        cooldown_time=cooldown_time,
+    )
 
 
 # sign up page
@@ -145,16 +152,7 @@ def signup():
             return "User created!<br><a href='/login'>Login now</a>"
 
     # HTML form for signup
-    return """
-        <h1>Sign Up</h1>
-        <form method="post">
-          Username: <input type="text" name="username" required><br>
-          Password: <input type="password" name="password" required><br>
-          <input type="submit" value="Sign Up">
-        </form>
-        <br>
-        <a href='/login'>Login</a>
-    """
+    return render_template("signup.html")
 
 
 # New route: View Password
@@ -183,16 +181,17 @@ def logout():
 
 @app.route("/admin_page")
 def admin_page():
-    if session['username']=="admin":            
-        # Get all user records from the database
-        users = User.query.all()
+    output = "you are not an admin"
+    if session.get("username") is not None :
+        if session["username"] == "admin":
+            # Get all user records from the database
+            users = User.query.all()
 
-        # Build a simple string to display each user's info
-        output = "<h1>All Users</h1>"
-        for user in users:
-            output += f"ID: {user.id}, Username: {user.username}, Password: {user.password}<br>"
-    else:
-        output = "you are not an adminß"
+            # Build a simple string to display each user's info
+            output = "<h1>All Users</h1>"
+            for user in users:
+                output += f"ID: {user.id}, Username: {user.username}, Password: {user.password}<br>"
+
     return output
 
 
@@ -208,6 +207,6 @@ def admin_page():
 #     return "".join(result)
 
 
-# Run the Flask app
+# to run the app
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5003)

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form method="post">
+      Username: <input type="text" name="username" required value="{{ username_value }}"><br>
+      Password: <input type="password" name="password" required value="{{ password_value }}"><br>
+      {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+      {% endif %}
+      {% if cooldown_time %}
+        <p style="color: red;">
+          Please wait <span id="countdown">{{ cooldown_time }}</span> seconds before trying again.
+        </p>
+      {% endif %}
+      <input type="submit" value="Login">
+    </form>
+    <br>
+    <a href="/signup">Sign Up</a>
+    
+    {% if cooldown_time %}
+    <script>
+      var countdownElement = document.getElementById("countdown");
+      var timeLeft = parseInt(countdownElement.innerText);
+      
+      var timer = setInterval(function(){
+          timeLeft--;
+          countdownElement.innerText = timeLeft;
+          if(timeLeft <= 0){
+              clearInterval(timer);
+              // Optionally, reload the page when the countdown ends
+              location.reload();
+          }
+      }, 1000);
+    </script>
+    {% endif %}
+  </body>
+</html>
