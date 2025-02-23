@@ -1,11 +1,11 @@
 from flask import Flask, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 import logging
-<<<<<<< HEAD
 import bcrypt
-=======
 import time
->>>>>>> 3ee7f9f60742127091cf14379bbefa6c227b642f
+
+
+is_admin = False
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.sqlite3"
@@ -44,11 +44,19 @@ def is_strong_password(password):
 @app.route("/")
 def home():
     if "username" in session:
-        return (
+        if session['username'] == "admin":
+            return (
             f"Hello, {session['username']}!<br>"
             f"<a href='/view_password'>View Password</a><br>"
+            f"<a href='/admin_page'>Admin Page</a><br>"
             f"<a href='/logout'>Logout</a>"
-        )
+            )
+        else:
+            return (
+                f"Hello, {session['username']}!<br>"
+                f"<a href='/view_password'>View Password</a><br>"
+                f"<a href='/logout'>Logout</a>"
+            )
     return (
         "You are not logged in.<br>"
         "<a href='/login'>Login</a> or <a href='/signup'>Sign Up</a>"
@@ -69,20 +77,26 @@ def login():
             attempts = failed_attempts[username]["count"]
             last_attempt = failed_attempts[username]["last_attempt"]
 
-            if attempts >= MAX_ATTEMPTS and (current_time -last_attempt) < COOLDOWN_TIME:
+            if (
+                attempts >= MAX_ATTEMPTS
+                and (current_time - last_attempt) < COOLDOWN_TIME
+            ):
                 remaining_time = int(COOLDOWN_TIME - (current_time - last_attempt))
-                return f"Too many failed attempts. Try again in {remaining_time} seconds."
+                return (
+                    f"Too many failed attempts. Try again in {remaining_time} seconds."
+                )
 
         # Look up the user in the database
-        user = User.query.filter_by(
-            username=username, password=decrypt_password(password)
-        ).first()
+        user = User.query.filter_by(username=username, password=password).first()
         if user:
             failed_attempts.pop(username, None)
             session["username"] = user.username
             return redirect(url_for("home"))
+
         else:
-            logging.warning(f"Failed login attempt for username: {username} from IP: {request.remote_addr}")
+            logging.warning(
+                f"Failed login attempt for username: {username} from IP: {request.remote_addr}"
+            )
 
             if username in failed_attempts:
                 failed_attempts[username]["count"] += 1
@@ -125,7 +139,7 @@ def signup():
             )
         else:
             # Create a new user record and save it to the database
-            new_user = User(username=username, password=encrypt_password(password))
+            new_user = User(username=username, password=password)
             db.session.add(new_user)
             db.session.commit()
             return "User created!<br><a href='/login'>Login now</a>"
@@ -167,18 +181,33 @@ def logout():
     return redirect(url_for("home"))
 
 
-def encrypt_password(plain_pword):
-    plain_pword=plain_pword.encode('uft-8')
-    salt
+@app.route("/admin_page")
+def admin_page():
+    if session['username']=="admin":            
+        # Get all user records from the database
+        users = User.query.all()
 
-def decrypt_password(encrypted_pword):
-    result = []
-    for c in pword:
-        # Shift character back by 3 positions
-        result.append(chr(ord(c) - 3))
-    return "".join(result)
+        # Build a simple string to display each user's info
+        output = "<h1>All Users</h1>"
+        for user in users:
+            output += f"ID: {user.id}, Username: {user.username}, Password: {user.password}<br>"
+    else:
+        output = "you are not an adminß"
+    return output
+
+
+# def encrypt_password(plain_pword):
+#     plain_pword=plain_pword.encode('uft-8')
+#     salt
+
+# def decrypt_password(encrypted_pword):
+#     result = []
+#     for c in pword:
+#         # Shift character back by 3 positions
+#         result.append(chr(ord(c) - 3))
+#     return "".join(result)
 
 
 # Run the Flask app
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5002)
+    app.run(debug=True, host="0.0.0.0", port=5003)

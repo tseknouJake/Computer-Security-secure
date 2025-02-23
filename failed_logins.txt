@@ -140,3 +140,564 @@
 2025-02-23 12:09:53,052 - INFO -  * Restarting with stat
 2025-02-23 12:09:53,199 - WARNING -  * Debugger is active!
 2025-02-23 12:09:53,203 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 12:18:49,314 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.143:5002
+2025-02-23 12:18:49,314 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 12:18:49,315 - INFO -  * Restarting with stat
+2025-02-23 12:18:49,461 - WARNING -  * Debugger is active!
+2025-02-23 12:18:49,466 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 12:18:57,708 - INFO - 127.0.0.1 - - [23/Feb/2025 12:18:57] "GET / HTTP/1.1" 200 -
+2025-02-23 12:19:00,767 - INFO - 127.0.0.1 - - [23/Feb/2025 12:19:00] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:19:03,435 - INFO - 127.0.0.1 - - [23/Feb/2025 12:19:03] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-02-23 12:19:03,738 - INFO - 127.0.0.1 - - [23/Feb/2025 12:19:03] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-23 12:19:03,739 - INFO - 127.0.0.1 - - [23/Feb/2025 12:19:03] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-23 12:19:03,747 - INFO - 127.0.0.1 - - [23/Feb/2025 12:19:03] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1" 200 -
+2025-02-23 12:19:03,880 - INFO - 127.0.0.1 - - [23/Feb/2025 12:19:03] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-23 12:20:07,868 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.143:5002
+2025-02-23 12:20:07,869 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 12:20:07,869 - INFO -  * Restarting with stat
+2025-02-23 12:20:08,024 - WARNING -  * Debugger is active!
+2025-02-23 12:20:08,028 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 12:20:11,239 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:11] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:20:11,251 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:11] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:20:11,253 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:11] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:20:11,253 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:11] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:20:11,253 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:11] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:20:17,997 - WARNING - Failed login attempt for username: ajj from IP: 127.0.0.1
+2025-02-23 12:20:17,998 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:17] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:20:21,109 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:21] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:20:21,117 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:21] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:20:21,118 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:21] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:20:21,119 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:21] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:20:21,119 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:21] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:20:26,382 - WARNING - Failed login attempt for username: jake from IP: 127.0.0.1
+2025-02-23 12:20:26,382 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:26] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:20:38,944 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:38] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:20:38,973 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:38] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:20:38,974 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:38] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:20:38,974 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:38] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:20:38,975 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:38] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:20:44,214 - WARNING - Failed login attempt for username: jake from IP: 127.0.0.1
+2025-02-23 12:20:44,215 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:44] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:20:46,407 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:46] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:20:46,410 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:46] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:20:46,414 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:46] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:20:46,414 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:46] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:20:46,414 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:46] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:20:49,211 - WARNING - Failed login attempt for username: ajej from IP: 127.0.0.1
+2025-02-23 12:20:49,212 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:49] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:20:51,827 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:51] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:20:51,831 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:51] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:20:51,832 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:51] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:20:51,833 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:51] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:20:51,833 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:51] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:20:54,687 - WARNING - Failed login attempt for username: jake from IP: 127.0.0.1
+2025-02-23 12:20:54,687 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:54] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:20:56,948 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:56] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:20:56,951 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:56] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:20:56,952 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:56] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:20:56,953 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:56] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:20:56,953 - INFO - 127.0.0.1 - - [23/Feb/2025 12:20:56] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:21:03,969 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:03] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:21:11,570 - WARNING - Failed login attempt for username: jake from IP: 127.0.0.1
+2025-02-23 12:21:11,570 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:11] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:21:13,726 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:13] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:21:13,730 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:13] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:21:13,730 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:13] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:21:13,732 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:13] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:21:13,733 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:13] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:21:16,327 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:16] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:21:22,965 - WARNING - Failed login attempt for username: jake from IP: 127.0.0.1
+2025-02-23 12:21:22,967 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:22] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:21:26,868 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:26] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:21:32,824 - INFO - 127.0.0.1 - - [23/Feb/2025 12:21:32] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:22:03,334 - WARNING - Failed login attempt for username: qjhejqh from IP: 127.0.0.1
+2025-02-23 12:22:03,335 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:03] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:22:06,767 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:06] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:22:06,776 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:06] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:22:06,777 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:06] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:22:06,778 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:06] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:22:06,778 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:06] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:22:08,778 - WARNING - Failed login attempt for username: 31 from IP: 127.0.0.1
+2025-02-23 12:22:08,778 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:08] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:22:10,547 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:10] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:22:10,551 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:10] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:22:10,552 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:10] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:22:10,552 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:10] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:22:10,552 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:10] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:22:12,684 - WARNING - Failed login attempt for username: 4141 from IP: 127.0.0.1
+2025-02-23 12:22:12,685 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:12] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:22:14,542 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:14] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:22:14,546 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:14] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:22:14,547 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:14] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:22:14,547 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:14] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:22:14,547 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:14] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:22:17,122 - WARNING - Failed login attempt for username: 15 from IP: 127.0.0.1
+2025-02-23 12:22:17,123 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:17] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:22:19,482 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:19] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:22:19,485 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:19] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:22:19,491 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:19] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:22:19,492 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:19] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:22:19,493 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:19] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:22:21,987 - WARNING - Failed login attempt for username: 1551 from IP: 127.0.0.1
+2025-02-23 12:22:21,987 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:21] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:22:24,253 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:24] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:22:24,255 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:24] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:22:24,257 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:24] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:22:24,257 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:24] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:22:24,258 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:24] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:22:26,628 - WARNING - Failed login attempt for username: 4125r from IP: 127.0.0.1
+2025-02-23 12:22:26,629 - INFO - 127.0.0.1 - - [23/Feb/2025 12:22:26] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:24:06,420 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:06] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:24:06,424 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:06] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:24:06,424 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:06] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:24:06,424 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:06] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:24:06,424 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:06] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:24:20,757 - WARNING - Failed login attempt for username: wqea from IP: 127.0.0.1
+2025-02-23 12:24:20,759 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:20] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:24:23,822 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:23] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:24:23,830 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:23] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:24:23,830 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:23] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:24:23,830 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:23] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:24:23,830 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:23] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:24:26,946 - WARNING - Failed login attempt for username: adjhaj from IP: 127.0.0.1
+2025-02-23 12:24:26,947 - INFO - 127.0.0.1 - - [23/Feb/2025 12:24:26] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:26:29,896 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 12:26:29,946 - INFO -  * Restarting with stat
+2025-02-23 12:26:30,170 - WARNING -  * Debugger is active!
+2025-02-23 12:26:30,174 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 12:26:37,839 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.143:5002
+2025-02-23 12:26:37,839 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 12:26:37,840 - INFO -  * Restarting with stat
+2025-02-23 12:26:37,997 - WARNING -  * Debugger is active!
+2025-02-23 12:26:38,001 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 12:26:42,718 - WARNING - Failed login attempt for username: adjhaj from IP: 127.0.0.1
+2025-02-23 12:26:42,719 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:42] "POST /login HTTP/1.1" 200 -
+2025-02-23 12:26:44,330 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:44] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-02-23 12:26:44,339 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:44] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:26:44,341 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:44] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:26:44,343 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:44] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:26:44,344 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:44] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:26:44,351 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:44] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=DALETjgTC9PchhQ3DnJp HTTP/1.1" 200 -
+2025-02-23 12:26:47,519 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:47] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-02-23 12:26:47,521 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:47] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=luHDbA88GmH0CYYtOjGP HTTP/1.1[0m" 304 -
+2025-02-23 12:26:47,521 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:47] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 12:26:47,522 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:47] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:26:47,522 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:47] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:26:47,530 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:47] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:26:47,534 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:47] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:26:47,543 - INFO - 127.0.0.1 - - [23/Feb/2025 12:26:47] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=DALETjgTC9PchhQ3DnJp HTTP/1.1[0m" 304 -
+2025-02-23 12:27:53,061 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.143:5002
+2025-02-23 12:27:53,061 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 12:27:53,061 - INFO -  * Restarting with stat
+2025-02-23 12:27:53,213 - WARNING -  * Debugger is active!
+2025-02-23 12:27:53,217 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 12:28:00,387 - INFO - 127.0.0.1 - - [23/Feb/2025 12:28:00] "GET / HTTP/1.1" 200 -
+2025-02-23 12:28:02,434 - INFO - 127.0.0.1 - - [23/Feb/2025 12:28:02] "GET /login HTTP/1.1" 200 -
+2025-02-23 12:28:02,451 - INFO - 127.0.0.1 - - [23/Feb/2025 12:28:02] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:28:02,452 - INFO - 127.0.0.1 - - [23/Feb/2025 12:28:02] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:28:05,583 - WARNING - Failed login attempt for username: ajke from IP: 127.0.0.1
+2025-02-23 12:28:05,584 - INFO - 127.0.0.1 - - [23/Feb/2025 12:28:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 12:28:05,875 - INFO - 127.0.0.1 - - [23/Feb/2025 12:28:05] "GET /login?error=Invalid+credentials.+Please+try+again. HTTP/1.1" 200 -
+2025-02-23 12:28:19,857 - WARNING - Failed login attempt for username: dhwjjh from IP: 127.0.0.1
+2025-02-23 12:28:19,858 - INFO - 127.0.0.1 - - [23/Feb/2025 12:28:19] "[32mPOST /login?error=Invalid+credentials.+Please+try+again. HTTP/1.1[0m" 302 -
+2025-02-23 12:28:20,155 - INFO - 127.0.0.1 - - [23/Feb/2025 12:28:20] "GET /login?error=Invalid+credentials.+Please+try+again. HTTP/1.1" 200 -
+2025-02-23 12:31:48,908 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.143:5002
+2025-02-23 12:31:48,908 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 12:31:48,909 - INFO -  * Restarting with stat
+2025-02-23 12:31:49,062 - WARNING -  * Debugger is active!
+2025-02-23 12:31:49,066 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 12:31:53,732 - INFO - 127.0.0.1 - - [23/Feb/2025 12:31:53] "[35m[1mGET /login?error=Invalid+credentials.+Please+try+again. HTTP/1.1[0m" 500 -
+2025-02-23 12:31:53,764 - INFO - 127.0.0.1 - - [23/Feb/2025 12:31:53] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-23 12:31:53,764 - INFO - 127.0.0.1 - - [23/Feb/2025 12:31:53] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-23 12:31:53,772 - INFO - 127.0.0.1 - - [23/Feb/2025 12:31:53] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=kqSGFTkNbs3UnTrehYyK HTTP/1.1" 200 -
+2025-02-23 12:31:59,436 - INFO - 127.0.0.1 - - [23/Feb/2025 12:31:59] "GET / HTTP/1.1" 200 -
+2025-02-23 12:32:01,026 - INFO - 127.0.0.1 - - [23/Feb/2025 12:32:01] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-02-23 12:32:01,029 - INFO - 127.0.0.1 - - [23/Feb/2025 12:32:01] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:32:01,029 - INFO - 127.0.0.1 - - [23/Feb/2025 12:32:01] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:32:01,037 - INFO - 127.0.0.1 - - [23/Feb/2025 12:32:01] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 12:32:01,039 - INFO - 127.0.0.1 - - [23/Feb/2025 12:32:01] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 12:32:01,048 - INFO - 127.0.0.1 - - [23/Feb/2025 12:32:01] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=kqSGFTkNbs3UnTrehYyK HTTP/1.1[0m" 304 -
+2025-02-23 13:45:55,233 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:45:55,233 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:45:55,234 - INFO -  * Restarting with stat
+2025-02-23 13:45:55,385 - WARNING -  * Debugger is active!
+2025-02-23 13:45:55,390 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:46:20,678 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:46:20,715 - INFO -  * Restarting with stat
+2025-02-23 13:46:20,936 - WARNING -  * Debugger is active!
+2025-02-23 13:46:20,939 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:46:26,023 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:46:26,023 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:46:26,023 - INFO -  * Restarting with stat
+2025-02-23 13:46:26,169 - WARNING -  * Debugger is active!
+2025-02-23 13:46:26,172 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:46:43,323 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:46:43,381 - INFO -  * Restarting with stat
+2025-02-23 13:46:43,539 - WARNING -  * Debugger is active!
+2025-02-23 13:46:43,542 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:46:44,554 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:46:44,598 - INFO -  * Restarting with stat
+2025-02-23 13:46:44,752 - WARNING -  * Debugger is active!
+2025-02-23 13:46:44,756 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:46:47,310 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:46:47,310 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:46:47,310 - INFO -  * Restarting with stat
+2025-02-23 13:46:47,458 - WARNING -  * Debugger is active!
+2025-02-23 13:46:47,462 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:46:56,054 - INFO - 127.0.0.1 - - [23/Feb/2025 13:46:56] "GET /login HTTP/1.1" 200 -
+2025-02-23 13:46:56,071 - INFO - 127.0.0.1 - - [23/Feb/2025 13:46:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-23 13:47:00,088 - INFO - 127.0.0.1 - - [23/Feb/2025 13:47:00] "GET /login HTTP/1.1" 200 -
+2025-02-23 13:47:02,535 - INFO - 127.0.0.1 - - [23/Feb/2025 13:47:02] "GET /admin_page HTTP/1.1" 200 -
+2025-02-23 13:47:09,378 - INFO - 127.0.0.1 - - [23/Feb/2025 13:47:09] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 13:47:09,388 - INFO - 127.0.0.1 - - [23/Feb/2025 13:47:09] "GET / HTTP/1.1" 200 -
+2025-02-23 13:47:12,066 - INFO - 127.0.0.1 - - [23/Feb/2025 13:47:12] "GET / HTTP/1.1" 200 -
+2025-02-23 13:47:13,693 - INFO - 127.0.0.1 - - [23/Feb/2025 13:47:13] "GET /admin_page HTTP/1.1" 200 -
+2025-02-23 13:47:48,114 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:47:48,172 - INFO -  * Restarting with stat
+2025-02-23 13:47:48,395 - WARNING -  * Debugger is active!
+2025-02-23 13:47:48,399 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:47:52,434 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:47:52,478 - INFO -  * Restarting with stat
+2025-02-23 13:47:52,634 - WARNING -  * Debugger is active!
+2025-02-23 13:47:52,637 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:47:58,696 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:47:58,752 - INFO -  * Restarting with stat
+2025-02-23 13:49:17,161 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:49:17,161 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:49:17,161 - INFO -  * Restarting with stat
+2025-02-23 13:49:17,320 - WARNING -  * Debugger is active!
+2025-02-23 13:49:17,324 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:49:19,170 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:19] "GET / HTTP/1.1" 200 -
+2025-02-23 13:49:20,624 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:20] "GET /view_password HTTP/1.1" 200 -
+2025-02-23 13:49:22,369 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:22] "GET / HTTP/1.1" 200 -
+2025-02-23 13:49:23,048 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-23 13:49:23,058 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:23] "GET / HTTP/1.1" 200 -
+2025-02-23 13:49:24,003 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:24] "GET /login HTTP/1.1" 200 -
+2025-02-23 13:49:26,396 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 13:49:26,409 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:26] "GET / HTTP/1.1" 200 -
+2025-02-23 13:49:43,573 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:49:43,618 - INFO -  * Restarting with stat
+2025-02-23 13:49:43,838 - WARNING -  * Debugger is active!
+2025-02-23 13:49:43,841 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:49:45,044 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:49:45,045 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:49:45,045 - INFO -  * Restarting with stat
+2025-02-23 13:49:45,194 - WARNING -  * Debugger is active!
+2025-02-23 13:49:45,197 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:49:47,284 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:47] "GET /view_password HTTP/1.1" 200 -
+2025-02-23 13:49:48,129 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:48] "GET / HTTP/1.1" 200 -
+2025-02-23 13:49:48,976 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-23 13:49:48,985 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:48] "GET / HTTP/1.1" 200 -
+2025-02-23 13:49:49,828 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:49] "GET /login HTTP/1.1" 200 -
+2025-02-23 13:49:52,489 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 13:49:52,502 - INFO - 127.0.0.1 - - [23/Feb/2025 13:49:52] "GET / HTTP/1.1" 200 -
+2025-02-23 13:50:12,461 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:50:12,505 - INFO -  * Restarting with stat
+2025-02-23 13:50:12,721 - WARNING -  * Debugger is active!
+2025-02-23 13:50:12,724 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:50:14,536 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:50:14,536 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:50:14,537 - INFO -  * Restarting with stat
+2025-02-23 13:50:14,684 - WARNING -  * Debugger is active!
+2025-02-23 13:50:14,687 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:50:16,223 - INFO - 127.0.0.1 - - [23/Feb/2025 13:50:16] "GET / HTTP/1.1" 200 -
+2025-02-23 13:50:17,341 - INFO - 127.0.0.1 - - [23/Feb/2025 13:50:17] "GET /view_password HTTP/1.1" 200 -
+2025-02-23 13:50:18,087 - INFO - 127.0.0.1 - - [23/Feb/2025 13:50:18] "GET / HTTP/1.1" 200 -
+2025-02-23 13:50:18,649 - INFO - 127.0.0.1 - - [23/Feb/2025 13:50:18] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-23 13:50:18,659 - INFO - 127.0.0.1 - - [23/Feb/2025 13:50:18] "GET / HTTP/1.1" 200 -
+2025-02-23 13:50:19,515 - INFO - 127.0.0.1 - - [23/Feb/2025 13:50:19] "GET /login HTTP/1.1" 200 -
+2025-02-23 13:50:22,055 - INFO - 127.0.0.1 - - [23/Feb/2025 13:50:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 13:50:22,068 - INFO - 127.0.0.1 - - [23/Feb/2025 13:50:22] "GET / HTTP/1.1" 200 -
+2025-02-23 13:50:26,047 - INFO - 127.0.0.1 - - [23/Feb/2025 13:50:26] "GET / HTTP/1.1" 200 -
+2025-02-23 13:50:28,898 - INFO - 127.0.0.1 - - [23/Feb/2025 13:50:28] "GET /admin_page HTTP/1.1" 200 -
+2025-02-23 13:54:34,902 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:54:34,902 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:54:34,902 - INFO -  * Restarting with stat
+2025-02-23 13:54:35,050 - WARNING -  * Debugger is active!
+2025-02-23 13:54:35,053 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:54:42,797 - INFO - 127.0.0.1 - - [23/Feb/2025 13:54:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-02-23 13:54:42,821 - INFO - 127.0.0.1 - - [23/Feb/2025 13:54:42] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-23 13:54:42,823 - INFO - 127.0.0.1 - - [23/Feb/2025 13:54:42] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-23 13:54:42,830 - INFO - 127.0.0.1 - - [23/Feb/2025 13:54:42] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1" 200 -
+2025-02-23 13:54:42,933 - INFO - 127.0.0.1 - - [23/Feb/2025 13:54:42] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-23 13:55:19,471 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:55:19,524 - INFO -  * Restarting with stat
+2025-02-23 13:55:19,757 - WARNING -  * Debugger is active!
+2025-02-23 13:55:19,761 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:55:20,209 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:55:20,210 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:55:20,210 - INFO -  * Restarting with stat
+2025-02-23 13:55:20,357 - WARNING -  * Debugger is active!
+2025-02-23 13:55:20,360 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:55:21,743 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:21] "GET / HTTP/1.1" 200 -
+2025-02-23 13:55:23,716 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-23 13:55:23,740 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-02-23 13:55:23,755 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:23] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 13:55:23,756 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:23] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 13:55:23,765 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:23] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=BxmxiAUQvLk6AMsi6RyX HTTP/1.1" 200 -
+2025-02-23 13:55:36,761 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-02-23 13:55:36,763 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:36] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 13:55:36,764 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:36] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 13:55:36,764 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:36] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 13:55:36,764 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:36] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 13:55:36,775 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:36] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 13:55:36,777 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:36] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 13:55:36,782 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:36] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=BxmxiAUQvLk6AMsi6RyX HTTP/1.1[0m" 304 -
+2025-02-23 13:55:38,489 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:38] "GET /login HTTP/1.1" 200 -
+2025-02-23 13:55:45,271 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 13:55:45,284 - INFO - 127.0.0.1 - - [23/Feb/2025 13:55:45] "GET / HTTP/1.1" 200 -
+2025-02-23 13:56:03,843 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:56:03,903 - INFO -  * Restarting with stat
+2025-02-23 13:56:04,139 - WARNING -  * Debugger is active!
+2025-02-23 13:56:04,143 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:56:06,435 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:56:06,435 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:56:06,435 - INFO -  * Restarting with stat
+2025-02-23 13:56:06,583 - WARNING -  * Debugger is active!
+2025-02-23 13:56:06,586 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:56:07,718 - INFO - 127.0.0.1 - - [23/Feb/2025 13:56:07] "GET / HTTP/1.1" 200 -
+2025-02-23 13:56:10,610 - INFO - 127.0.0.1 - - [23/Feb/2025 13:56:10] "GET / HTTP/1.1" 200 -
+2025-02-23 13:56:10,620 - INFO - 127.0.0.1 - - [23/Feb/2025 13:56:10] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 13:56:10,621 - INFO - 127.0.0.1 - - [23/Feb/2025 13:56:10] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 13:56:10,623 - INFO - 127.0.0.1 - - [23/Feb/2025 13:56:10] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 13:56:10,623 - INFO - 127.0.0.1 - - [23/Feb/2025 13:56:10] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 13:56:11,722 - INFO - 127.0.0.1 - - [23/Feb/2025 13:56:11] "GET /login HTTP/1.1" 200 -
+2025-02-23 13:56:20,002 - INFO - 127.0.0.1 - - [23/Feb/2025 13:56:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 13:56:20,012 - INFO - 127.0.0.1 - - [23/Feb/2025 13:56:20] "GET / HTTP/1.1" 200 -
+2025-02-23 13:57:02,140 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:57:02,187 - INFO -  * Restarting with stat
+2025-02-23 13:57:02,407 - WARNING -  * Debugger is active!
+2025-02-23 13:57:02,411 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:57:03,249 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:57:03,249 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:57:03,250 - INFO -  * Restarting with stat
+2025-02-23 13:57:03,397 - WARNING -  * Debugger is active!
+2025-02-23 13:57:03,401 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:57:05,393 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-23 13:57:05,412 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-02-23 13:57:05,416 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:05] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=BxmxiAUQvLk6AMsi6RyX HTTP/1.1[0m" 304 -
+2025-02-23 13:57:05,425 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:05] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 13:57:05,427 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:05] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 13:57:05,434 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:05] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=v2JC5DBONWg0GsySb9lx HTTP/1.1" 200 -
+2025-02-23 13:57:09,658 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-02-23 13:57:09,660 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 13:57:09,660 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 13:57:09,661 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:09] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 13:57:09,661 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:09] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 13:57:09,669 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:09] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 13:57:09,670 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:09] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 13:57:09,676 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=v2JC5DBONWg0GsySb9lx HTTP/1.1[0m" 304 -
+2025-02-23 13:57:13,199 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:13] "GET /login HTTP/1.1" 200 -
+2025-02-23 13:57:17,855 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 13:57:17,868 - INFO - 127.0.0.1 - - [23/Feb/2025 13:57:17] "GET / HTTP/1.1" 200 -
+2025-02-23 13:57:58,664 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 13:57:58,664 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 13:57:58,664 - INFO -  * Restarting with stat
+2025-02-23 13:57:58,811 - WARNING -  * Debugger is active!
+2025-02-23 13:57:58,815 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 13:58:00,716 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:00] "GET / HTTP/1.1" 200 -
+2025-02-23 13:58:03,516 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:03] "GET / HTTP/1.1" 200 -
+2025-02-23 13:58:03,523 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:03] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 13:58:03,528 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:03] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 13:58:03,531 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:03] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 13:58:03,531 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:03] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 13:58:04,566 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:04] "[33mGET /home HTTP/1.1[0m" 404 -
+2025-02-23 13:58:08,555 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:08] "GET / HTTP/1.1" 200 -
+2025-02-23 13:58:08,558 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:08] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 13:58:08,558 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:08] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 13:58:08,559 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:08] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 13:58:08,560 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:08] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 13:58:12,306 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-23 13:58:12,313 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:12] "GET / HTTP/1.1" 200 -
+2025-02-23 13:58:14,378 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:14] "GET /login HTTP/1.1" 200 -
+2025-02-23 13:58:17,697 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 13:58:17,709 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:17] "GET / HTTP/1.1" 200 -
+2025-02-23 13:58:22,323 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:22] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-23 13:58:22,331 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:22] "GET / HTTP/1.1" 200 -
+2025-02-23 13:58:23,137 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:23] "GET /login HTTP/1.1" 200 -
+2025-02-23 13:58:26,170 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 13:58:26,184 - INFO - 127.0.0.1 - - [23/Feb/2025 13:58:26] "GET / HTTP/1.1" 200 -
+2025-02-23 13:59:01,451 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 13:59:01,498 - INFO -  * Restarting with stat
+2025-02-23 14:00:04,181 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 14:00:04,181 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 14:00:04,182 - INFO -  * Restarting with stat
+2025-02-23 14:00:04,334 - WARNING -  * Debugger is active!
+2025-02-23 14:00:04,339 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 14:00:06,251 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:06] "GET / HTTP/1.1" 200 -
+2025-02-23 14:00:07,730 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:07] "GET /view_password HTTP/1.1" 200 -
+2025-02-23 14:00:08,389 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:08] "GET / HTTP/1.1" 200 -
+2025-02-23 14:00:08,399 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:08] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 14:00:08,404 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:08] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 14:00:08,405 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:08] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 14:00:08,406 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:08] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 14:00:08,975 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:08] "GET /admin_page HTTP/1.1" 200 -
+2025-02-23 14:00:17,475 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 14:00:17,512 - INFO -  * Restarting with stat
+2025-02-23 14:00:17,665 - WARNING -  * Debugger is active!
+2025-02-23 14:00:17,668 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 14:00:34,838 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 14:00:34,881 - INFO -  * Restarting with stat
+2025-02-23 14:00:35,037 - WARNING -  * Debugger is active!
+2025-02-23 14:00:35,040 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 14:00:37,058 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 14:00:37,108 - INFO -  * Restarting with stat
+2025-02-23 14:00:37,281 - WARNING -  * Debugger is active!
+2025-02-23 14:00:37,285 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 14:00:37,922 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 14:00:37,922 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 14:00:37,922 - INFO -  * Restarting with stat
+2025-02-23 14:00:38,068 - WARNING -  * Debugger is active!
+2025-02-23 14:00:38,071 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 14:00:40,397 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:40] "GET /admin_page HTTP/1.1" 200 -
+2025-02-23 14:00:43,340 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:43] "GET / HTTP/1.1" 200 -
+2025-02-23 14:00:43,349 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:43] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 14:00:43,355 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:43] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 14:00:43,355 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:43] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 14:00:43,356 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:43] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 14:00:44,050 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:44] "[33mGET /home HTTP/1.1[0m" 404 -
+2025-02-23 14:00:46,911 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:46] "GET / HTTP/1.1" 200 -
+2025-02-23 14:00:46,915 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:46] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 14:00:46,915 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:46] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 14:00:46,915 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:46] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 14:00:46,915 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:46] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 14:00:48,792 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-23 14:00:48,800 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:48] "GET / HTTP/1.1" 200 -
+2025-02-23 14:00:50,030 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:50] "GET /login HTTP/1.1" 200 -
+2025-02-23 14:00:52,556 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 14:00:52,570 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:52] "GET / HTTP/1.1" 200 -
+2025-02-23 14:00:56,522 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:56] "GET / HTTP/1.1" 200 -
+2025-02-23 14:00:56,526 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:56] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 14:00:56,526 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:56] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 14:00:56,527 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:56] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 14:00:56,528 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:56] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 14:00:57,920 - INFO - 127.0.0.1 - - [23/Feb/2025 14:00:57] "GET /admin_page HTTP/1.1" 200 -
+2025-02-23 14:01:29,060 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 14:01:29,061 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 14:01:29,063 - INFO -  * Restarting with stat
+2025-02-23 14:01:29,223 - WARNING -  * Debugger is active!
+2025-02-23 14:01:29,227 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 14:01:31,071 - INFO - 127.0.0.1 - - [23/Feb/2025 14:01:31] "GET /admin_page HTTP/1.1" 200 -
+2025-02-23 14:02:27,793 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 14:02:27,847 - INFO -  * Restarting with stat
+2025-02-23 14:02:28,069 - WARNING -  * Debugger is active!
+2025-02-23 14:02:28,073 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 14:02:29,467 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 14:02:29,467 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 14:02:29,467 - INFO -  * Restarting with stat
+2025-02-23 14:02:29,615 - WARNING -  * Debugger is active!
+2025-02-23 14:02:29,618 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 14:02:37,264 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:37] "GET / HTTP/1.1" 200 -
+2025-02-23 14:02:37,275 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:37] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 14:02:37,276 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:37] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 14:02:37,276 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:37] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 14:02:37,276 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:37] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 14:02:38,595 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:38] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-23 14:02:38,601 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:38] "GET / HTTP/1.1" 200 -
+2025-02-23 14:02:40,843 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:40] "GET /login HTTP/1.1" 200 -
+2025-02-23 14:02:43,429 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 14:02:43,443 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:43] "GET / HTTP/1.1" 200 -
+2025-02-23 14:02:45,045 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:45] "GET / HTTP/1.1" 200 -
+2025-02-23 14:02:45,050 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:45] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 14:02:45,050 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:45] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 14:02:45,050 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:45] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 14:02:45,050 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:45] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 14:02:47,028 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:47] "GET /admin_page HTTP/1.1" 200 -
+2025-02-23 14:02:51,434 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:51] "GET /admin_page HTTP/1.1" 200 -
+2025-02-23 14:02:52,409 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:52] "GET / HTTP/1.1" 200 -
+2025-02-23 14:02:52,412 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:52] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 14:02:52,413 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:52] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 14:02:52,413 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:52] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 14:02:52,413 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:52] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 14:02:53,456 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:53] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-23 14:02:53,464 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:53] "GET / HTTP/1.1" 200 -
+2025-02-23 14:02:55,174 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:55] "GET /login HTTP/1.1" 200 -
+2025-02-23 14:02:57,775 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-23 14:02:57,788 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:57] "GET / HTTP/1.1" 200 -
+2025-02-23 14:02:58,939 - INFO - 127.0.0.1 - - [23/Feb/2025 14:02:58] "GET /admin_page HTTP/1.1" 200 -
+2025-02-23 14:03:02,909 - INFO - 127.0.0.1 - - [23/Feb/2025 14:03:02] "GET / HTTP/1.1" 200 -
+2025-02-23 14:03:02,913 - INFO - 127.0.0.1 - - [23/Feb/2025 14:03:02] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-23 14:03:02,915 - INFO - 127.0.0.1 - - [23/Feb/2025 14:03:02] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-23 14:03:02,916 - INFO - 127.0.0.1 - - [23/Feb/2025 14:03:02] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-23 14:03:02,916 - INFO - 127.0.0.1 - - [23/Feb/2025 14:03:02] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-23 14:03:07,010 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 14:03:07,069 - INFO -  * Restarting with stat
+2025-02-23 14:03:07,321 - WARNING -  * Debugger is active!
+2025-02-23 14:03:07,326 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 14:03:49,878 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://192.168.178.143:5003
+2025-02-23 14:03:49,879 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-23 14:03:49,879 - INFO -  * Restarting with stat
+2025-02-23 14:03:50,032 - WARNING -  * Debugger is active!
+2025-02-23 14:03:50,035 - INFO -  * Debugger PIN: 107-192-584
+2025-02-23 14:03:50,773 - INFO - 127.0.0.1 - - [23/Feb/2025 14:03:50] "[35m[1mGET /admin_page HTTP/1.1[0m" 500 -
+2025-02-23 14:03:50,792 - INFO - 127.0.0.1 - - [23/Feb/2025 14:03:50] "GET /admin_page?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-23 14:03:50,794 - INFO - 127.0.0.1 - - [23/Feb/2025 14:03:50] "GET /admin_page?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-23 14:03:50,802 - INFO - 127.0.0.1 - - [23/Feb/2025 14:03:50] "GET /admin_page?__debugger__=yes&cmd=resource&f=console.png&s=2o30RXcBCbAcJg9iDhyV HTTP/1.1" 200 -
+2025-02-23 14:03:50,931 - INFO - 127.0.0.1 - - [23/Feb/2025 14:03:50] "GET /admin_page?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-23 14:04:05,188 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-23 14:04:05,249 - INFO -  * Restarting with stat
+2025-02-23 14:04:05,488 - WARNING -  * Debugger is active!
+2025-02-23 14:04:05,492 - INFO -  * Debugger PIN: 107-192-584
