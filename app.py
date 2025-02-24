@@ -34,24 +34,6 @@ class User(db.Model):
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
 
-#add api key here
-
-
-def get_inspirational_quote():
-    try:
-        response = openai.ChatCompletion.create(
-            model="gpt",  # using a known working model
-            messages=[
-                {"role": "user", "content": "give me a random very inspirational quote for my run club"}
-            ]
-        )
-        # Extract the generated quote from the response dictionary
-        quote = response['choices'][0]['message']['content'].strip()
-    except Exception as e:
-        print("Error generating quote:", e)
-        quote = "Keep pushing forward, one step at a time!"
-    return quote
-
 
 def is_strong_password(password):
     return (
@@ -68,11 +50,11 @@ def is_strong_password(password):
 def home():
     if "username" in session:
 
-        quote = get_inspirational_quote()
+
         if session["username"] == "admin":
             return (
                 f"Hello, {session['username']}!<br>"
-                f"<em>{quote}</em><br>"
+
                 f"<a href='/view_password'>View Password</a><br>"
                 f"<a href='/admin_page'>Admin Page</a><br>"
                 f"<a href='/logout'>Logout</a>"
@@ -80,7 +62,7 @@ def home():
         else:
             return (
                 f"Hello, {session['username']}!<br>"
-                f"<em>{quote}</em><br>"
+
                 f"<a href='/view_password'>View Password</a><br>"
                 f"<a href='/logout'>Logout</a>"
             )

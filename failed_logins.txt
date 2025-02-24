@@ -2532,3 +2532,11 @@
 2025-02-24 12:47:55,816 - INFO -  * Restarting with stat
 2025-02-24 12:47:56,089 - WARNING -  * Debugger is active!
 2025-02-24 12:47:56,092 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:49:26,323 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://145.127.60.137:5003
+2025-02-24 12:49:26,323 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-24 12:49:26,323 - INFO -  * Restarting with stat
+2025-02-24 12:49:26,596 - WARNING -  * Debugger is active!
+2025-02-24 12:49:26,600 - INFO -  * Debugger PIN: 128-472-929
