@@ -2333,3 +2333,194 @@
 2025-02-23 17:04:47,358 - INFO - 127.0.0.1 - - [23/Feb/2025 17:04:47] "POST /login HTTP/1.1" 200 -
 2025-02-23 17:04:47,974 - INFO - 127.0.0.1 - - [23/Feb/2025 17:04:47] "POST /login HTTP/1.1" 200 -
 2025-02-23 17:04:58,001 - INFO - 127.0.0.1 - - [23/Feb/2025 17:04:58] "GET /login HTTP/1.1" 200 -
+2025-02-24 08:50:24,523 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://145.127.60.137:5003
+2025-02-24 08:50:24,523 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-24 08:50:24,524 - INFO -  * Restarting with stat
+2025-02-24 08:50:24,675 - WARNING -  * Debugger is active!
+2025-02-24 08:50:24,679 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 08:50:30,789 - INFO - 127.0.0.1 - - [24/Feb/2025 08:50:30] "GET / HTTP/1.1" 200 -
+2025-02-24 08:50:30,797 - INFO - 127.0.0.1 - - [24/Feb/2025 08:50:30] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-24 08:50:30,797 - INFO - 127.0.0.1 - - [24/Feb/2025 08:50:30] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-24 08:50:38,510 - INFO - 127.0.0.1 - - [24/Feb/2025 08:50:38] "GET /signup HTTP/1.1" 200 -
+2025-02-24 08:50:49,442 - INFO - 127.0.0.1 - - [24/Feb/2025 08:50:49] "POST /signup HTTP/1.1" 200 -
+2025-02-24 08:51:01,383 - INFO - 127.0.0.1 - - [24/Feb/2025 08:51:01] "POST /signup HTTP/1.1" 200 -
+2025-02-24 08:51:09,368 - INFO - 127.0.0.1 - - [24/Feb/2025 08:51:09] "POST /signup HTTP/1.1" 200 -
+2025-02-24 08:51:11,867 - INFO - 127.0.0.1 - - [24/Feb/2025 08:51:11] "GET /login HTTP/1.1" 200 -
+2025-02-24 08:51:28,479 - INFO - 127.0.0.1 - - [24/Feb/2025 08:51:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-24 08:51:28,499 - INFO - 127.0.0.1 - - [24/Feb/2025 08:51:28] "GET / HTTP/1.1" 200 -
+2025-02-24 08:51:33,661 - INFO - 127.0.0.1 - - [24/Feb/2025 08:51:33] "GET /view_password HTTP/1.1" 200 -
+2025-02-24 08:52:07,826 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:07] "GET / HTTP/1.1" 200 -
+2025-02-24 08:52:07,828 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:07] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-24 08:52:07,829 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:07] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-24 08:52:09,498 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:09] "GET /admin_page HTTP/1.1" 200 -
+2025-02-24 08:52:17,281 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:17] "GET / HTTP/1.1" 200 -
+2025-02-24 08:52:17,283 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:17] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-24 08:52:17,284 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:17] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-24 08:52:18,986 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:18] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-24 08:52:18,999 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:18] "GET / HTTP/1.1" 200 -
+2025-02-24 08:52:19,856 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:19] "GET /login HTTP/1.1" 200 -
+2025-02-24 08:52:24,884 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-24 08:52:24,901 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:24] "GET / HTTP/1.1" 200 -
+2025-02-24 08:52:26,054 - INFO - 127.0.0.1 - - [24/Feb/2025 08:52:26] "GET /admin_page HTTP/1.1" 200 -
+2025-02-24 08:55:53,035 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://145.127.60.137:5003
+2025-02-24 08:55:53,035 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-24 08:55:53,035 - INFO -  * Restarting with stat
+2025-02-24 08:55:53,179 - WARNING -  * Debugger is active!
+2025-02-24 08:55:53,182 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:06:00,190 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://145.127.60.137:5003
+2025-02-24 12:06:00,190 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-24 12:06:00,191 - INFO -  * Restarting with stat
+2025-02-24 12:06:00,346 - WARNING -  * Debugger is active!
+2025-02-24 12:06:00,350 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:06:04,133 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:04] "GET / HTTP/1.1" 200 -
+2025-02-24 12:06:04,140 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:04] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-24 12:06:04,141 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:04] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-24 12:06:10,146 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:10] "GET / HTTP/1.1" 200 -
+2025-02-24 12:06:10,149 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:10] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-24 12:06:10,149 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:10] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-24 12:06:11,196 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:11] "GET / HTTP/1.1" 200 -
+2025-02-24 12:06:11,199 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:11] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-24 12:06:11,199 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:11] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-24 12:06:12,170 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-24 12:06:12,179 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:12] "GET / HTTP/1.1" 200 -
+2025-02-24 12:06:13,577 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:13] "GET /login HTTP/1.1" 200 -
+2025-02-24 12:06:16,924 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-24 12:06:16,945 - INFO - 127.0.0.1 - - [24/Feb/2025 12:06:16] "GET / HTTP/1.1" 200 -
+2025-02-24 12:13:13,925 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:13:13,972 - INFO -  * Restarting with stat
+2025-02-24 12:20:06,814 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://145.127.60.137:5003
+2025-02-24 12:20:06,814 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-24 12:20:06,814 - INFO -  * Restarting with stat
+2025-02-24 12:20:07,114 - WARNING -  * Debugger is active!
+2025-02-24 12:20:07,118 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:20:10,603 - INFO - 127.0.0.1 - - [24/Feb/2025 12:20:10] "GET / HTTP/1.1" 200 -
+2025-02-24 12:20:12,291 - INFO - 127.0.0.1 - - [24/Feb/2025 12:20:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-24 12:20:12,303 - INFO - 127.0.0.1 - - [24/Feb/2025 12:20:12] "GET / HTTP/1.1" 200 -
+2025-02-24 12:20:13,652 - INFO - 127.0.0.1 - - [24/Feb/2025 12:20:13] "GET /login HTTP/1.1" 200 -
+2025-02-24 12:20:17,047 - INFO - 127.0.0.1 - - [24/Feb/2025 12:20:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-24 12:20:17,067 - INFO - 127.0.0.1 - - [24/Feb/2025 12:20:17] "GET / HTTP/1.1" 200 -
+2025-02-24 12:20:20,348 - INFO - 127.0.0.1 - - [24/Feb/2025 12:20:20] "GET / HTTP/1.1" 200 -
+2025-02-24 12:20:21,589 - INFO - 127.0.0.1 - - [24/Feb/2025 12:20:21] "GET / HTTP/1.1" 200 -
+2025-02-24 12:20:22,747 - INFO - 127.0.0.1 - - [24/Feb/2025 12:20:22] "GET / HTTP/1.1" 200 -
+2025-02-24 12:20:24,446 - INFO - 127.0.0.1 - - [24/Feb/2025 12:20:24] "GET / HTTP/1.1" 200 -
+2025-02-24 12:21:38,629 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://145.127.60.137:5003
+2025-02-24 12:21:38,629 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-24 12:21:38,629 - INFO -  * Restarting with stat
+2025-02-24 12:21:38,943 - WARNING -  * Debugger is active!
+2025-02-24 12:21:38,947 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:21:42,873 - INFO - 127.0.0.1 - - [24/Feb/2025 12:21:42] "GET /view_password HTTP/1.1" 200 -
+2025-02-24 12:21:42,984 - INFO - 127.0.0.1 - - [24/Feb/2025 12:21:42] "GET / HTTP/1.1" 200 -
+2025-02-24 12:21:43,688 - INFO - 127.0.0.1 - - [24/Feb/2025 12:21:43] "GET / HTTP/1.1" 200 -
+2025-02-24 12:21:45,462 - INFO - 127.0.0.1 - - [24/Feb/2025 12:21:45] "GET / HTTP/1.1" 200 -
+2025-02-24 12:21:45,475 - INFO - 127.0.0.1 - - [24/Feb/2025 12:21:45] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-24 12:21:45,480 - INFO - 127.0.0.1 - - [24/Feb/2025 12:21:45] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VM21cRGWmlGRBiKGnuZU HTTP/1.1[0m" 304 -
+2025-02-24 12:27:57,961 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:27:58,053 - INFO -  * Restarting with stat
+2025-02-24 12:27:58,491 - WARNING -  * Debugger is active!
+2025-02-24 12:27:58,495 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:28:17,817 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:28:17,891 - INFO -  * Restarting with stat
+2025-02-24 12:28:18,222 - WARNING -  * Debugger is active!
+2025-02-24 12:28:18,225 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:28:23,314 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:28:23,394 - INFO -  * Restarting with stat
+2025-02-24 12:28:23,708 - WARNING -  * Debugger is active!
+2025-02-24 12:28:23,712 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:28:32,533 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://145.127.60.137:5003
+2025-02-24 12:28:32,533 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-24 12:28:32,533 - INFO -  * Restarting with stat
+2025-02-24 12:28:32,824 - WARNING -  * Debugger is active!
+2025-02-24 12:28:32,828 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:28:42,328 - INFO - 127.0.0.1 - - [24/Feb/2025 12:28:42] "GET / HTTP/1.1" 200 -
+2025-02-24 12:28:44,841 - INFO - 127.0.0.1 - - [24/Feb/2025 12:28:44] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-24 12:28:44,852 - INFO - 127.0.0.1 - - [24/Feb/2025 12:28:44] "GET / HTTP/1.1" 200 -
+2025-02-24 12:28:46,095 - INFO - 127.0.0.1 - - [24/Feb/2025 12:28:46] "GET /login HTTP/1.1" 200 -
+2025-02-24 12:28:49,658 - INFO - 127.0.0.1 - - [24/Feb/2025 12:28:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-24 12:28:51,811 - INFO - 127.0.0.1 - - [24/Feb/2025 12:28:51] "GET / HTTP/1.1" 200 -
+2025-02-24 12:29:12,524 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:29:12,607 - INFO -  * Restarting with stat
+2025-02-24 12:29:13,058 - WARNING -  * Debugger is active!
+2025-02-24 12:29:13,063 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:29:23,142 - INFO - 127.0.0.1 - - [24/Feb/2025 12:29:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-24 12:29:23,156 - INFO - 127.0.0.1 - - [24/Feb/2025 12:29:23] "GET / HTTP/1.1" 200 -
+2025-02-24 12:29:24,117 - INFO - 127.0.0.1 - - [24/Feb/2025 12:29:24] "GET /login HTTP/1.1" 200 -
+2025-02-24 12:29:29,570 - INFO - 127.0.0.1 - - [24/Feb/2025 12:29:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-24 12:29:31,490 - INFO - 127.0.0.1 - - [24/Feb/2025 12:29:31] "GET / HTTP/1.1" 200 -
+2025-02-24 12:29:47,373 - INFO - 127.0.0.1 - - [24/Feb/2025 12:29:47] "GET / HTTP/1.1" 200 -
+2025-02-24 12:30:05,986 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:30:06,085 - INFO -  * Restarting with stat
+2025-02-24 12:30:06,409 - WARNING -  * Debugger is active!
+2025-02-24 12:30:06,413 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:30:17,574 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:30:17,682 - INFO -  * Restarting with stat
+2025-02-24 12:30:17,995 - WARNING -  * Debugger is active!
+2025-02-24 12:30:17,999 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:30:30,207 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:30:30,287 - INFO -  * Restarting with stat
+2025-02-24 12:30:30,614 - WARNING -  * Debugger is active!
+2025-02-24 12:30:30,617 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:30:37,747 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:30:37,881 - INFO -  * Restarting with stat
+2025-02-24 12:30:38,201 - WARNING -  * Debugger is active!
+2025-02-24 12:30:38,205 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:32:53,642 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:32:53,734 - INFO -  * Restarting with stat
+2025-02-24 12:41:04,678 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://145.127.60.137:5003
+2025-02-24 12:41:04,678 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-24 12:41:04,678 - INFO -  * Restarting with stat
+2025-02-24 12:41:04,948 - WARNING -  * Debugger is active!
+2025-02-24 12:41:04,954 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:41:11,026 - INFO - 127.0.0.1 - - [24/Feb/2025 12:41:11] "GET / HTTP/1.1" 200 -
+2025-02-24 12:41:12,975 - INFO - 127.0.0.1 - - [24/Feb/2025 12:41:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-24 12:41:12,988 - INFO - 127.0.0.1 - - [24/Feb/2025 12:41:12] "GET / HTTP/1.1" 200 -
+2025-02-24 12:41:14,168 - INFO - 127.0.0.1 - - [24/Feb/2025 12:41:14] "GET /login HTTP/1.1" 200 -
+2025-02-24 12:41:17,572 - INFO - 127.0.0.1 - - [24/Feb/2025 12:41:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-24 12:41:17,594 - INFO - 127.0.0.1 - - [24/Feb/2025 12:41:17] "GET / HTTP/1.1" 200 -
+2025-02-24 12:42:25,328 - INFO -  * Detected change in '/Users/jakelockitch/Desktop/Computer sec/Computer-Security-secure/app.py', reloading
+2025-02-24 12:42:25,418 - INFO -  * Restarting with stat
+2025-02-24 12:42:25,706 - WARNING -  * Debugger is active!
+2025-02-24 12:42:25,709 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:42:28,300 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://145.127.60.137:5003
+2025-02-24 12:42:28,300 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-24 12:42:28,301 - INFO -  * Restarting with stat
+2025-02-24 12:42:28,571 - WARNING -  * Debugger is active!
+2025-02-24 12:42:28,574 - INFO -  * Debugger PIN: 128-472-929
+2025-02-24 12:42:31,006 - INFO - 127.0.0.1 - - [24/Feb/2025 12:42:31] "GET / HTTP/1.1" 200 -
+2025-02-24 12:42:32,129 - INFO - 127.0.0.1 - - [24/Feb/2025 12:42:32] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-24 12:42:32,142 - INFO - 127.0.0.1 - - [24/Feb/2025 12:42:32] "GET / HTTP/1.1" 200 -
+2025-02-24 12:42:33,225 - INFO - 127.0.0.1 - - [24/Feb/2025 12:42:33] "GET /login HTTP/1.1" 200 -
+2025-02-24 12:42:36,303 - INFO - 127.0.0.1 - - [24/Feb/2025 12:42:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-24 12:42:36,325 - INFO - 127.0.0.1 - - [24/Feb/2025 12:42:36] "GET / HTTP/1.1" 200 -
+2025-02-24 12:42:40,640 - INFO - 127.0.0.1 - - [24/Feb/2025 12:42:40] "GET / HTTP/1.1" 200 -
+2025-02-24 12:46:52,963 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://145.127.60.137:5003
+2025-02-24 12:46:52,963 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-24 12:46:52,964 - INFO -  * Restarting with stat
+2025-02-24 12:46:53,241 - WARNING -  * Debugger is active!
+2025-02-24 12:46:53,245 - INFO -  * Debugger PIN: 128-472-929

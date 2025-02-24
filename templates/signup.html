@@ -3,7 +3,7 @@
   Username: <input type="text" name="username" required value="{{ username_value }}"><br>
   Password: <input type="password" name="password" required value="{{ password_value }}"><br>
   {% if error_message %}
-  <p style="color: red;">{{ error_message }}</p>
+    <p style="color: red;">{{ error_message }}</p>
   {% endif %}
   <input type="submit" value="Sign Up">
 </form>

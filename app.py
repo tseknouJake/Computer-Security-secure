@@ -3,6 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 import logging
 import bcrypt
 import time
+import openai 
+import os
+
 
 
 app = Flask(__name__)
@@ -31,6 +34,24 @@ class User(db.Model):
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
 
+openai.api_key = os.getenv("OPENAI_API_KEY", "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")
+
+
+def get_inspirational_quote():
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt",  # using a known working model
+            messages=[
+                {"role": "user", "content": "give me a random very inspirational quote for my run club"}
+            ]
+        )
+        # Extract the generated quote from the response dictionary
+        quote = response['choices'][0]['message']['content'].strip()
+    except Exception as e:
+        print("Error generating quote:", e)
+        quote = "Keep pushing forward, one step at a time!"
+    return quote
+
 
 def is_strong_password(password):
     return (
@@ -46,9 +67,12 @@ def is_strong_password(password):
 @app.route("/")
 def home():
     if "username" in session:
+
+        quote = get_inspirational_quote()
         if session["username"] == "admin":
             return (
                 f"Hello, {session['username']}!<br>"
+                f"<em>{quote}</em><br>"
                 f"<a href='/view_password'>View Password</a><br>"
                 f"<a href='/admin_page'>Admin Page</a><br>"
                 f"<a href='/logout'>Logout</a>"
@@ -56,6 +80,7 @@ def home():
         else:
             return (
                 f"Hello, {session['username']}!<br>"
+                f"<em>{quote}</em><br>"
                 f"<a href='/view_password'>View Password</a><br>"
                 f"<a href='/logout'>Logout</a>"
             )
