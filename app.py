@@ -3,8 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 import logging
 import bcrypt
 import time
-import openai 
-import os
 
 
 
