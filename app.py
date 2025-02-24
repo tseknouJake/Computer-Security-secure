@@ -34,7 +34,7 @@ class User(db.Model):
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
 
-openai.api_key = os.getenv("OPENAI_API_KEY", "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")
+openai.api_key = os.getenv("OPENAI_API_KEY", "")
 
 
 def get_inspirational_quote():
