@@ -249,14 +249,16 @@ def signup():
     )
 
 
-# view password
+# view password route
 @app.route("/view_password")
 def view_password():
     if "username" not in session:
         return redirect(url_for("login"))
 
+    # get the logged-in username from the session
     username = session["username"]
 
+    # search database for the user
     user = User.query.filter_by(username=username).first()
 
     if user:
@@ -277,6 +279,7 @@ def admin_page():
     #default output is "you are not an admin"
     output = "you are not an admin"
     if session.get("username") is not None:
+        
         #checks if the user is the admin
         if session["username"] == "admin":
             # get all user records from the database
