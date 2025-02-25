@@ -279,9 +279,10 @@ def admin_page():
     #default output is "you are not an admin"
     output = "you are not an admin"
     if session.get("username") is not None:
-        
+
         #checks if the user is the admin
         if session["username"] == "admin":
+            
             # get all user records from the database
             users = User.query.all()
 
