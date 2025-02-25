@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 import logging
 import bcrypt
 import time
-
+import pandas as pd
 
 
 app = Flask(__name__)
@@ -25,6 +25,7 @@ logging.basicConfig(
 failed_attempts = {}
 COOLDOWN_TIME = 11
 MAX_ATTEMPTS = 3
+df = pd.read_csv("quotes.csv", encoding="utf-8")
 
 
 class User(db.Model):
@@ -43,26 +44,48 @@ def is_strong_password(password):
     )
 
 
+def get_random_quote_and_author():
+    random_row = df.sample(n=1).iloc[0]  # select random row
+
+    return [random_row["Quote"], random_row["Author"]]
+
+
 # home page
 @app.route("/")
 def home():
     if "username" in session:
-
+        quote = get_random_quote_and_author()
 
         if session["username"] == "admin":
             return (
                 f"Hello, {session['username']}!<br>"
-
                 f"<a href='/view_password'>View Password</a><br>"
                 f"<a href='/admin_page'>Admin Page</a><br>"
-                f"<a href='/logout'>Logout</a>"
+                f"<a href='/logout'>Logout</a><br>"
+                f"""
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50vh;">
+                    <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 20px;">
+                        <h1 style="margin-bottom: 20px;">{quote[0]}</h1>
+                        <p> - {quote[1]} </p>
+                        <button onclick="location.reload()">New Quote</button>
+                    </div>
+                </div>
+                """
             )
         else:
             return (
                 f"Hello, {session['username']}!<br>"
-
                 f"<a href='/view_password'>View Password</a><br>"
-                f"<a href='/logout'>Logout</a>"
+                f"<a href='/logout'>Logout</a><br>"
+                f"""
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50vh;">
+                    <div style="max-width: 800px; margin: 0 auto; text-align: center; padding: 20px;">
+                        <h1 style="margin-bottom: 20px;">{quote[0]}</h1>
+                        <p> - {quote[1]} </p>
+                        <button onclick="location.reload()">New Quote</button>
+                    </div>
+                </div>
+                """
             )
     return (
         "You are not logged in.<br>"
@@ -112,10 +135,12 @@ def login():
                 session["username"] = user.username
                 return redirect(url_for("home"))
             else:
-                            logging.warning(
+                logging.warning(
+                    f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}"
+                )
+            print(
                 f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}"
             )
-            print(f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}")
             if username_value in failed_attempts:
                 failed_attempts[username_value]["count"] += 1
                 failed_attempts[username_value]["last_attempt"] = current_time
@@ -129,7 +154,9 @@ def login():
             logging.warning(
                 f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}"
             )
-            print(f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}")
+            print(
+                f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}"
+            )
             if username_value in failed_attempts:
                 failed_attempts[username_value]["count"] += 1
                 failed_attempts[username_value]["last_attempt"] = current_time
@@ -187,7 +214,9 @@ def signup():
             # Create a new user record and save it to the database
             peppered_password = (password_value + app.config["PEPPER"]).encode("utf-8")
             hashed_password = bcrypt.hashpw(peppered_password, bcrypt.gensalt())
-            new_user = User(username=username_value, password=hashed_password.decode("utf-8"))
+            new_user = User(
+                username=username_value, password=hashed_password.decode("utf-8")
+            )
             db.session.add(new_user)
             db.session.commit()
             return "User created!<br><a href='/login'>Login now</a>"
