@@ -9,23 +9,27 @@ import pandas as pd
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///users.sqlite3"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.secret_key = "your_secret_key"  # Needed for session management
+app.secret_key = "your_secret_key"  # for session management
 app.config["PEPPER"] = (
     "VeryLongAndCoolPepper"  # we will use this for password peppering
 )
 
+# open database
 db = SQLAlchemy(app)
 
+# configures the loggins when a user attempts to log in
 logging.basicConfig(
     filename="failed_logins.txt",
     level=logging.WARNING,
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 
+logging.getLogger("werkzeug").setLevel(logging.WARNING)
+
 failed_attempts = {}
 COOLDOWN_TIME = 11
 MAX_ATTEMPTS = 3
-df = pd.read_csv("quotes.csv", encoding="utf-8")
+df = pd.read_csv("quotes.csv", encoding="utf-8")  # we use this csv for the quotes
 
 
 class User(db.Model):
@@ -34,6 +38,8 @@ class User(db.Model):
     password = db.Column(db.String(80), nullable=False)
 
 
+# makes sure we have a secure password that is at least 8 characters long,
+# contains an uppercase letter, a lowercase letter, a number, and a special character
 def is_strong_password(password):
     return (
         len(password) >= 8
@@ -44,6 +50,7 @@ def is_strong_password(password):
     )
 
 
+# returns an array that has the quote at position 0 and the author name position 1
 def get_random_quote_and_author():
     random_row = df.sample(n=1).iloc[0]  # select random row
 
@@ -56,6 +63,7 @@ def home():
     if "username" in session:
         quote = get_random_quote_and_author()
 
+        # if user is the admin user allow them to go to the admin page
         if session["username"] == "admin":
             return (
                 f"Hello, {session['username']}!<br>"
@@ -73,6 +81,7 @@ def home():
                 """
             )
         else:
+            # normal user
             return (
                 f"Hello, {session['username']}!<br>"
                 f"<a href='/view_password'>View Password</a><br>"
@@ -93,7 +102,7 @@ def home():
     )
 
 
-# Login page
+# login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
     error_message = None
@@ -102,11 +111,12 @@ def login():
     cooldown_time = None
 
     if request.method == "POST":
-        # Capture form data
+        # capture form data and current time
         username_value = request.form["username"]
         password_value = request.form["password"]
         current_time = time.time()
 
+        # used for the time out
         if username_value in failed_attempts:
             attempts = failed_attempts[username_value]["count"]
             last_attempt = failed_attempts[username_value]["last_attempt"]
@@ -114,9 +124,10 @@ def login():
                 attempts >= MAX_ATTEMPTS
                 and (current_time - last_attempt) < COOLDOWN_TIME
             ):
+                # give a cool down if user unsuccessfully tried to log in 3 times
                 remaining_time = int(COOLDOWN_TIME - (current_time - last_attempt))
                 error_message = "Too many failed attempts. Please wait."
-                cooldown_time = remaining_time  # Pass remaining time to the template
+                cooldown_time = remaining_time
                 return render_template(
                     "login.html",
                     error_message=error_message,
@@ -128,8 +139,13 @@ def login():
         # look up the user in the database
         user = User.query.filter_by(username=username_value).first()
         if user:
+
+            # pepper the password with our awesome pepper
             peppered_password = (password_value + app.config["PEPPER"]).encode("utf-8")
             stored_hash = user.password.encode("utf-8")
+
+            # decrypts the encrypted password and if the user is valid then we send the
+            # user to the home page
             if bcrypt.checkpw(peppered_password, stored_hash):
                 failed_attempts.pop(username_value, None)
                 session["username"] = user.username
@@ -141,6 +157,8 @@ def login():
             print(
                 f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}"
             )
+
+            # increase count if the username has tried to log in
             if username_value in failed_attempts:
                 failed_attempts[username_value]["count"] += 1
                 failed_attempts[username_value]["last_attempt"] = current_time
@@ -157,6 +175,7 @@ def login():
             print(
                 f"Failed login attempt for username: {username_value} from IP: {request.remote_addr}"
             )
+            # increase count if the username has tried to log in
             if username_value in failed_attempts:
                 failed_attempts[username_value]["count"] += 1
                 failed_attempts[username_value]["last_attempt"] = current_time
@@ -199,6 +218,7 @@ def signup():
                 password_value=password_value,
             )
 
+        #displays message when password isnt strong
         if not is_strong_password(password_value):
             error_message = (
                 "Password must be at least 8 characters long, contain an uppercase letter, "
@@ -211,7 +231,7 @@ def signup():
                 password_value=password_value,
             )
         else:
-            # Create a new user record and save it to the database
+            # create a new user record and save it to the database
             peppered_password = (password_value + app.config["PEPPER"]).encode("utf-8")
             hashed_password = bcrypt.hashpw(peppered_password, bcrypt.gensalt())
             new_user = User(
@@ -254,13 +274,15 @@ def logout():
 
 @app.route("/admin_page")
 def admin_page():
+    #default output is "you are not an admin"
     output = "you are not an admin"
     if session.get("username") is not None:
+        #checks if the user is the admin
         if session["username"] == "admin":
-            # Get all user records from the database
+            # get all user records from the database
             users = User.query.all()
 
-            # Build a simple string to display each user's info
+            # show all users on the page
             output = "<h1>All Users</h1>"
             for user in users:
                 output += f"ID: {user.id}, Username: {user.username}, Password: {user.password}<br>"
